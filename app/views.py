@@ -32,8 +32,8 @@ def status_callback(task):
     except futures._base.CancelledError:
         return
 
-    url = str(CALLBACK_URL+str(result["mission_id"])+'/finance/')
-    requests.put(url, data={"finance_status": result['status'], "token": TOKEN}, timeout=3)
+    url = str(CALLBACK_URL+str(result["mission_id"])+'/funding/')
+    requests.put(url, data={"funding_status": result['status'], "token": TOKEN}, timeout=3)
 
 
 @api_view(['POST'])
