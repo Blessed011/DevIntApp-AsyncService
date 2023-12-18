@@ -1,5 +1,3 @@
-from django.shortcuts import render
-
 # Create your views here.
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -11,7 +9,7 @@ import requests
 
 from concurrent import futures
 
-CALLBACK_URL = "http://127.0.0.1:8081/api/missions/"
+CALLBACK_URL = "http://localhost:8081/api/missions/"
 
 executor = futures.ThreadPoolExecutor(max_workers=1)
 TOKEN = 'secret_token'
