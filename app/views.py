@@ -9,14 +9,14 @@ import requests
 
 from concurrent import futures
 
-CALLBACK_URL = "http://localhost:8081/api/missions/"
+CALLBACK_URL = "http://localhost:80/api/missions/"
 
 executor = futures.ThreadPoolExecutor(max_workers=1)
 TOKEN = 'secret_token'
 
 
 def get_random_status(mission_id):
-    time.sleep(5)
+    time.sleep(7)
     return {
         "mission_id": mission_id,
         "status": bool(random.randint(0, 3)),
